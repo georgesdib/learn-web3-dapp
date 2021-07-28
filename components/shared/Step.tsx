@@ -86,7 +86,13 @@ const StepButtons = ({
 				</PrevButton>
 			}
 			{!isLastStep &&
-				<NextButton size="large" type="primary" onClick={() => next()} text_color={getButtonTextColor(chainId)} bg_color={getButtonBgColor(chainId)}>
+				<NextButton
+					size="large"
+					type="primary"
+					onClick={() => next()}
+					text_color={getButtonTextColor(chainId)}
+					bg_color={getButtonBgColor(chainId)}
+				>
 					<Row align="middle">
 						Next Step
 						<ArrowRightOutlined size={20} style={{ marginLeft: "6px" }} />
@@ -108,15 +114,15 @@ const getButtonBgColor = (chainId: CHAINS) => {
 		return '#e6007a';
 	} else if (chainId === CHAINS.TEZOS) {
 		return '#0f62ff';
-    } else if (chainId === CHAINS.CELO) {
-        return "linear-gradient(253deg, rgb(251, 204, 92), rgb(53,208,127))"
-    } else if (chainId === CHAINS.NEAR) {
-        return "linear-gradient(253deg, #00c1de, #00c08b)"
-    } else if (chainId === CHAINS.SECRET) {
-        return "black"
-    }
-	
-    return "rgb(255,242,155)"
+	} else if (chainId === CHAINS.CELO) {
+		return "linear-gradient(253deg, rgb(251, 204, 92), rgb(53,208,127))"
+	} else if (chainId === CHAINS.NEAR) {
+		return "linear-gradient(253deg, #00c1de, #00c08b)"
+	} else if (chainId === CHAINS.SECRET) {
+		return "black"
+	}
+
+	return "rgb(255,242,155)"
 }
 
 const getButtonTextColor = (chainId: CHAINS) => {
@@ -140,7 +146,7 @@ const StepHeader = styled(Col)`
 `;
 
 const StepFooter = styled(Space)`
-	margin-top: 20px;
+	margin: 20px 0 40px 0;
 `;
 
 const Title = styled.div`

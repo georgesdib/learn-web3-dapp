@@ -4,7 +4,7 @@ export const CHAINS_CONFIG: ChainsType = {
 	[CHAINS.AVALANCHE]: {
 		id: CHAINS.AVALANCHE,
 		label: "Avalanche",
-		active: true,
+		active: false,
 		logoUrl: "https://cryptologos.cc/logos/avalanche-avax-logo.svg?v=010",
 		steps: [
 			{
@@ -32,7 +32,7 @@ export const CHAINS_CONFIG: ChainsType = {
 	[CHAINS.CELO]: {
 		id: CHAINS.CELO,
 		label: "Celo",
-		active: true,
+		active: false,
 		logoUrl: "https://cryptologos.cc/logos/celo-celo-logo.svg?v=010",
 		steps: [
 			{
@@ -45,7 +45,7 @@ export const CHAINS_CONFIG: ChainsType = {
 	[CHAINS.THE_GRAPH]: {
 		id: CHAINS.THE_GRAPH,
 		label: "The Graph",
-		active: true,
+		active: false,
 		logoUrl: "https://cryptologos.cc/logos/the-graph-grt-logo.svg?v=012",
 		steps: [
 			{
@@ -58,7 +58,7 @@ export const CHAINS_CONFIG: ChainsType = {
 	[CHAINS.NEAR]: {
 		id: CHAINS.NEAR,
 		label: "NEAR",
-		active: true,
+		active: false,
 		logoUrl: "https://cryptologos.cc/logos/near-protocol-near-logo.svg?v=010",
 		steps: [
 			{
@@ -86,7 +86,7 @@ export const CHAINS_CONFIG: ChainsType = {
 	[CHAINS.POLKADOT]: {
 		id: CHAINS.POLKADOT,
 		label: "Polkadot",
-		active: true,
+		active: false,
 		logoUrl: "https://cryptologos.cc/logos/polkadot-new-dot-logo.svg?v=010",
 		steps: [
 			{
@@ -114,15 +114,35 @@ export const CHAINS_CONFIG: ChainsType = {
 		steps: [
 			{
 				id: "connect",
-				title: "Connect to the Matic testnet network",
-				url: ""
-			}
+				title: "Connect to Polygon",
+				url: "https://learn.figment.io/network-documentation/matic/polygon-matic-pathway/connect-to-polygon"
+			},
+			{
+				id: "query",
+				title: "Query Polygon",
+				url: "https://learn.figment.io/network-documentation/matic/polygon-matic-pathway/query-polygon"
+			},
+			{
+				id: "balance",
+				title: "Fund a Polygon account",
+				url: "https://learn.figment.io/network-documentation/matic/polygon-matic-pathway/fund-a-polygon-account"
+			},
+			{
+				id: "deploy",
+				title: "Deploy a Solidity smart contract",
+				url: "https://learn.figment.io/network-documentation/matic/polygon-matic-pathway/deploy-a-solidity-smart-contract"
+			},
+			{
+				id: "call",
+				title: "Call the smart contract",
+				url: "https://learn.figment.io/network-documentation/matic/polygon-matic-pathway/call-the-smart-contract"
+			},
 		]
 	},
 	[CHAINS.SECRET]: {
 		id: CHAINS.SECRET,
 		label: "Secret",
-		active: true,
+		active: false,
 		logoUrl: "https://cryptologos.cc/logos/secret-scrt-logo.svg?v=010",
 		steps: [
 			{
@@ -135,7 +155,7 @@ export const CHAINS_CONFIG: ChainsType = {
 	[CHAINS.SOLANA]: {
 		id: CHAINS.SOLANA,
 		label: "Solana",
-		active: true,
+		active: false,
 		logoUrl: "https://cryptologos.cc/logos/solana-sol-logo.svg?v=010",
 		steps: [
 			{
@@ -178,8 +198,8 @@ export const CHAINS_CONFIG: ChainsType = {
 	[CHAINS.TEZOS]: {
 		id: CHAINS.TEZOS,
 		label: "Tezos",
-		active: true,
-		logoUrl: "https://cryptologos.cc/logos/near-protocol-near-logo.svg?v=010",
+		active: false,
+		logoUrl: "https://cryptologos.cc/logos/tezos-xtz-logo.svg?v=010",
 		steps: [
 			{
 				id: "connect",

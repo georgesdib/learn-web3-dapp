@@ -21,7 +21,8 @@ const Query = () => {
 	const [error, setError] = useState<string | null>(null)
 
 	const getQuery = () => {
-		setFetching(true)
+		setFetching(true);
+
     
 		axios
 			.get(`${process.env.NEXT_PUBLIC_SERVER_URL}/api/polygon/query`)

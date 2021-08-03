@@ -45,10 +45,14 @@ const Call = () => {
     // -----------------------------
     // Define the Contract object below
     const contract = new ethers.Contract(
-		SimpleStorageJson.networks["80001"].address, SimpleStorageJson.abi, provider);
+      SimpleStorageJson.networks["80001"].address,
+      SimpleStorageJson.abi,
+      provider
+    );
 
-      // Call the contract's methods here
-	contract.get()
+    // Call the contract's methods here
+    contract
+      .get()
       .then((res: any) => {
         setContractNumber(res.toString());
       })
@@ -64,16 +68,20 @@ const Call = () => {
     setFetchingSet(true);
     setTxHash(null);
 
-    const provider = new ethers.providers.Web3Provider(window.ethereum)
-      // TODO
-      // -----------------------------
-      // Define the signer and Contract objects below
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(
-		SimpleStorageJson.networks["80001"].address, SimpleStorageJson.abi, signer);
+    const provider = new ethers.providers.Web3Provider(window.ethereum);
+    // TODO
+    // -----------------------------
+    // Define the signer and Contract objects below
+    const signer = provider.getSigner();
+    const contract = new ethers.Contract(
+      SimpleStorageJson.networks["80001"].address,
+      SimpleStorageJson.abi,
+      signer
+    );
 
-      // Call the contract's methods here passing the `inputNumber`
-	  contract.set(inputNumber)
+    // Call the contract's methods here passing the `inputNumber`
+    contract
+      .set(inputNumber)
       .then((txRes: any) => {
         console.log(JSON.stringify(txRes, null, 2));
         setFetchingSet(false);
